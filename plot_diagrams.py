@@ -42,4 +42,6 @@ if __name__ == '__main__':
     plot_amplitude(poz.poles, poz.zeros, subplots[0,1])
     plot_impulse_response(poz.poles, poz.zeros, subplots[1,0])
     plot_poles_zeros.plot_poles_zeros(poz.poles, poz.zeros, subplots[1,1])
+    print('poles: {}'.format(poz.poles))
+    print('zeros: {}'.format(poz.zeros))
     plt.show()

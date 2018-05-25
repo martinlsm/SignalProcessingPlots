@@ -5,10 +5,10 @@ import numpy as np
 def __fill_array__(array_to, array_from):
     for s in array_from:
         s = s.split(', ')
-        abs, angle = float(s[0]), 2 * math.pi * float(s[1])
-        array_to.append(complex(abs * math.cos(angle), abs * math.sin(angle)))
-        if math.sin(angle) != 0:
-            array_to.append(complex(abs * math.cos(angle), - abs * math.sin(angle)))
+        abs, angle = float(s[0]), float(s[1])
+        array_to.append(complex(abs * math.cos(2 * math.pi * angle), abs * math.sin(2 * math.pi * angle)))
+        if angle != 0 and angle != 0.5:
+            array_to.append(complex(abs * math.cos(2 * math.pi * angle), - abs * math.sin(2 * math.pi * angle)))
 
 def pad_shortest(list1, list2):
     if len(list1) < len(list2):
